@@ -20,7 +20,6 @@ include(WEBSITE_PATH.'./includes/menu.php');
 						<div class="row">
 							<div class="col">
 								<!--SlideShow-->
-								<a class="btn btn-light btn-lg pull-right" href="<?php WEBSITE_PATH.'./includes/slider.php';?>"><span class="glyphicon glyphicon-fullscreen"></span></a><h2 class="strong">SlideShow</h2>
 								<?php 
 									include(WEBSITE_PATH.'./includes/slider.php');
 								?>

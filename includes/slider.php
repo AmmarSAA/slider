@@ -53,6 +53,8 @@ $result = $conn->query($sql);
 
 ?>                  
 
+<button onclick="openFullscreen();" class="btn btn-light btn-lg pull-right"><span class="glyphicon glyphicon-fullscreen"></span></button>
+<h2 class="strong">SlideShow</h2>
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
@@ -74,3 +76,19 @@ $result = $conn->query($sql);
     <span class="sr-only">Next</span>
   </a>
 </div>
+
+<script>
+/* Get the element you want displayed in fullscreen */ 
+var elem = document.getElementById("myCarousel");
+
+/* Function to open fullscreen mode */
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
