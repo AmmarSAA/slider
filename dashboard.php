@@ -19,6 +19,9 @@ include(WEBSITE_PATH.'./includes/menu.php');
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col">
+								<!--FullScreen Button-->
+								<button onclick="openFullscreen();" class="btn btn-light btn-md pull-right"><span class="glyphicon glyphicon-fullscreen"></span></button>
+								<h1><strong>SlideShow</strong></h1>
 								<!--SlideShow-->
 								<?php 
 									include(WEBSITE_PATH.'./includes/slider.php');
@@ -30,6 +33,18 @@ include(WEBSITE_PATH.'./includes/menu.php');
 			</section>
 		</div>
 	</div>
+<script>
+var elem = document.getElementById("myCarousel");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+</script
 <?php
 include(WEBSITE_PATH.'./includes/footer.php');
 ?>
