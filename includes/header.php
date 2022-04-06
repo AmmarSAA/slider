@@ -33,7 +33,7 @@ ob_start();
 	<link rel="stylesheet" type="text/css" href="<?php echo WEBSITE_URL	?>css/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo WEBSITE_URL	?>css/bootstrap/old/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo WEBSITE_URL	?>css/bootstrap/old/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="<?php echo WEBSITE_URL	?>css/bootstrap/bootstrap-theme.min.css">
+	<!--<link rel="stylesheet" type="text/css" href="<?php echo WEBSITE_URL	?>css/bootstrap/bootstrap-theme.min.css">-->
 	<!--<link rel="stylesheet" type="text/css" href="<?php //echo WEBSITE_URL	?>css/bootstrap/docs.min.css">-->
 	<!--<link rel="stylesheet" type="text/css" href="<?php //echo WEBSITE_URL	?>css/bootstrap/morris.css">-->
 	<link rel="stylesheet" type="text/css" href="<?php echo WEBSITE_URL	?>css/bootstrap/font-awesome.min.css">
