@@ -64,4 +64,8 @@ ob_start();
 	</script>
 	<script src="<?php echo WEBSITE_URL	?>js/bootstrap/bootstrap.min.js">
 	</script>
+	<script src="<?php echo WEBSITE_URL	?>js/plugins.js"></script>
+	<script src="<?php echo WEBSITE_URL	?>js/plugins.js"></script>
+	<script src="<?php echo WEBSITE_URL	?>js/main.js"></script>
+	<script src="<?php echo WEBSITE_URL	?>js/popper.min.js"></script>
 </head>
