@@ -10,12 +10,12 @@ if (isset($_POST['slide-create']))
 {
 
     //
-    $fname      = "Dr. ".$_POST['fname'] ;
-    $ename      = $_POST['ename'] ;
-    $faname     = $_POST['mname'];
-    $mname      = $_POST['faname'];
-    $si         = $_POST['si'];
-    $avl = $_FILES['file']['tmp_name'];
+    $fname      = trim("Dr. ".$_POST['fname']);
+    $ename      = trim($_POST['ename']);
+    $faname     = trim($_POST['mname']);
+    $mname      = trim($_POST['faname']);
+    $si         = trim($_POST['si']);
+    $avl        = $_FILES['file']['tmp_name'];
     
     //Inserting slide into database
     $sql = "INSERT INTO `tblslider`(`slider_img`) 
@@ -23,7 +23,7 @@ if (isset($_POST['slide-create']))
     $result = $conn->query($sql);
     
     //If inserted into database then creating slide
-    if (isset($result))
+    if ($result)
     {
         $save       = "./images/slider/".str_replace(" ","_",$mname).'.jpg';
         $bgpic      = imagecreatefrompng("card.png");
