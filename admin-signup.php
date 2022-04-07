@@ -105,8 +105,7 @@ if (isset($msg))
 	echo $msg;
 }
 
-?>     							
-      							
+?>     													
 			<section id="content">
 				<div class="page-wrapper">
 					<div class="container-fluid">

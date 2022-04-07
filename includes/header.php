@@ -16,7 +16,7 @@ ob_start();
 	<title>Slider || Ammar S.A.A</title>
 	<link rel="icon" type="image/gif" href="<?php echo WEBSITE_URL	?>./images/logo.png">
 	<meta name="description" content="N.M Umer Farooq Library">
-	<meta name="author" content="S.A.A">
+	<meta name="author" content="Ammar S.A.A">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	
 	<!--Custom CSS-->
@@ -33,7 +33,7 @@ ob_start();
 	<link rel="stylesheet" type="text/css" href="<?php echo WEBSITE_URL	?>css/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo WEBSITE_URL	?>css/bootstrap/old/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo WEBSITE_URL	?>css/bootstrap/old/bootstrap.min.css">
-	<!--<link rel="stylesheet" type="text/css" href="<?php echo WEBSITE_URL	?>css/bootstrap/bootstrap-theme.min.css">-->
+	<!--<link rel="stylesheet" type="text/css" href="<?php //echo WEBSITE_URL	?>css/bootstrap/bootstrap-theme.min.css">-->
 	<!--<link rel="stylesheet" type="text/css" href="<?php //echo WEBSITE_URL	?>css/bootstrap/docs.min.css">-->
 	<!--<link rel="stylesheet" type="text/css" href="<?php //echo WEBSITE_URL	?>css/bootstrap/morris.css">-->
 	<link rel="stylesheet" type="text/css" href="<?php echo WEBSITE_URL	?>css/bootstrap/font-awesome.min.css">
@@ -64,8 +64,12 @@ ob_start();
 	</script>
 	<script src="<?php echo WEBSITE_URL	?>js/bootstrap/bootstrap.min.js">
 	</script>
-	<script src="<?php echo WEBSITE_URL	?>js/plugins.js"></script>
-	<script src="<?php echo WEBSITE_URL	?>js/plugins.js"></script>
-	<script src="<?php echo WEBSITE_URL	?>js/main.js"></script>
-	<script src="<?php echo WEBSITE_URL	?>js/popper.min.js"></script>
+	<script src="<?php echo WEBSITE_URL	?>js/plugins.js">
+	</script>
+	<script src="<?php echo WEBSITE_URL	?>js/plugins.js">
+	</script>
+	<script src="<?php echo WEBSITE_URL	?>js/main.js">
+	</script>
+	<script src="<?php echo WEBSITE_URL	?>js/popper.min.js">
+	</script>
 </head>

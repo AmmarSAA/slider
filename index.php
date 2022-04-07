@@ -20,34 +20,34 @@ if (isset($_GET['action'])) {
 	}
 switch ($action) {
 	case 'users':
-		// perform user-login validation
-	if (isset($_POST['name']))
-	{
-		
-		$user_name 	= trim($_POST['name']);
-		$password 	= ($_POST['password']);
+		// perform user-login validation for user
+		if (isset($_POST['name']))
+		{
+			
+			$user_name 	= trim($_POST['name']);
+			$password 	= ($_POST['password']);
 
-		if (!empty($user_name) && !empty($password)){
+			if (!empty($user_name) && !empty($password)){
 
-			$login_sql = "SELECT * FROM tblusers 
-				where user_name 	= '{$user_name}'
-				and password 		= '{$password}' ";
+				$login_sql = "SELECT * FROM tblusers 
+					where user_name 	= '{$user_name}'
+					and password 		= '{$password}' ";
 
-			$result = $conn->query($login_sql);
-			if ($result && $result->num_rows > 0)
-			{ 
-				$_SESSION['user_name'] = $user_name;
-				redirect("dashboard.php");
+				$result = $conn->query($login_sql);
+				if ($result && $result->num_rows > 0)
+				{ 
+					$_SESSION['user_name'] = $user_name;
+					redirect("dashboard.php");
+				}else{
+					$msg = "Invalid User Name or Password";	
+				}
 			}else{
-				$msg = "Invalid User Name or Password";	
+				$msg = "User Name or Password can not be empty";		
 			}
-		}else{
-			$msg = "User Name or Password can not be empty";		
 		}
-	}
 	break;
 	default:
-		// perform login validation
+		// perform login validation for admin
 		if (isset($_POST['name']))
 		{
 			

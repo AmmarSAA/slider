@@ -1,10 +1,10 @@
 <?php
 
-/************************************
-* File Name: dashboard.php 			*
-* Author: Ammar S.A.A 				*
-* Output: Dashboard 				*
-************************************/
+/****************************
+* File Name: dashboard.php 	*
+* Author: Ammar S.A.A 		*
+* Output: Dashboard 		*
+****************************/
 
 require('config.php');
 require(WEBSITE_PATH.'./includes/db_connection.php');
@@ -14,7 +14,7 @@ include(WEBSITE_PATH.'./includes/logo.php');
 include(WEBSITE_PATH.'./includes/menu.php');
 
 ?>    							
-      <section id="content">
+			<section id="content">
 				<div class="page-wrapper">
 					<div class="container-fluid">
 						<div class="row">
@@ -36,13 +36,13 @@ include(WEBSITE_PATH.'./includes/menu.php');
 <script>
 var elem = document.getElementById("myCarousel");
 function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.webkitRequestFullscreen) { /* Safari */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE11 */
-    elem.msRequestFullscreen();
-  }
+	if (elem.requestFullscreen) {
+    	elem.requestFullscreen();
+  	} else if (elem.webkitRequestFullscreen) { /* Safari */
+    	elem.webkitRequestFullscreen();
+  	} else if (elem.msRequestFullscreen) { /* IE11 */
+    	elem.msRequestFullscreen();
+  	}
 }
 </script
 <?php

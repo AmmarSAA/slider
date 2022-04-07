@@ -1,4 +1,11 @@
 <?php 
+
+/****************************************
+* File Name: index_slide-generator.php  *
+* Author: Ammar S.A.A                   *
+* Output: New slide generating Form     *
+****************************************/
+
 require('config.php');
 require(WEBSITE_PATH.'./includes/db_connection.php');
 require(WEBSITE_PATH.'./includes/session.php');
@@ -9,7 +16,7 @@ include(WEBSITE_PATH.'./includes/menu.php');
 if (isset($_POST['slide-create']))
 {
 
-    //
+    //getting from posted form
     $fname      = trim("Dr. ".$_POST['fname']);
     $ename      = trim($_POST['ename']);
     $faname     = trim($_POST['mname']);
@@ -76,56 +83,54 @@ if (isset($msg)) {
 }
 
 ?>
-<body>
-    <section id="content">
-                <div class="page-wrapper">
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col">
-                                <!--Slide Creation Form-->
-                                <form class="" action="#" method="post" name="slide-create" enctype="multipart/form-data">
-                                    <br />
-                                    <input type="hidden" name="slide-create" value="slide-create" />
-                                    <input type="hidden" name="id" value="<?php //echo $id;?>" />
-                                    <span class="f-img fa fa-slideshare fa-4x"></span>
-                                    <h2>Slide</h2>
-                                    <p>Slide Creation Form</p>
-                                    <p class="labelenglish"><b>Doctor's Picture:</b></p>
-                                    <input type="file" accept="img/*" value="<?php //echo $slider_img ?>" name="file" class="labelenglish text-uppercase" required />
-                                    <p class="labelenglish"><small><b>Note:</b><br /> Your <b class="text-uppercase text-right">Doctor's Picture</b> must not be more than <b>11 MB</b>.</small></p>
-                                    <p class="labelenglish"><b>SR#:</b></p>
-                                    <input type="number" value="<?php //echo $slide_no ?>" name="faname" class="blank" required />
-                                    <p class="labelenglish"><b>Doctor Name:</b></p>
-                                    <input type="text" value="<?php //echo $title ?>" name="fname" class="blank" />
-                                    <p class="labelenglish"><b>Qualification:</b></p>
-                                    <input type="text" value="<?php //echo $title ?>" name="ename" class="blank" />
-                                    <p class="labelenglish"><b>Digital Signature:</b></p>
-                                    <input type="text" value="<?php //echo $title ?>" name="si" class="blank" />
-                                    <p class="labelenglish"><b>Timings:</b></p>
-                                    <textarea  class="blank" name="mname"><?php //echo $content ?></textarea>
-                                    <div>
-                                        <input type="reset" name="reset" value="Reset"  class="btn btn-success"/>
-                                        <?php 
+	        <section id="content">
+	            <div class="page-wrapper">
+	                <div class="container-fluid">
+	                    <div class="row">
+	                        <div class="col">
+	                            <!--Slide Creation Form-->
+	                            <form class="" action="#" method="post" name="slide-create" enctype="multipart/form-data">
+	                                <br />
+	                                <input type="hidden" name="slide-create" value="slide-create" />
+	                                <input type="hidden" name="id" value="<?php //echo $id;?>" />
+	                                <span class="f-img fa fa-slideshare fa-4x"></span>
+	                                <h2>Slide</h2>
+	                                <p>Slide Creation Form</p>
+	                                <p class="labelenglish"><b>Doctor's Picture:</b></p>
+	                                <input type="file" accept="img/*" value="<?php //echo $slider_img ?>" name="file" class="labelenglish text-uppercase" required />
+	                                <p class="labelenglish"><small><b>Note:</b><br /> Your <b class="text-uppercase text-right">Doctor's Picture</b> must not be more than <b>11 MB</b>.</small></p>
+	                                <p class="labelenglish"><b>SR#:</b></p>
+	                                <input type="number" value="<?php //echo $slide_no ?>" name="faname" class="blank" required />
+	                                <p class="labelenglish"><b>Doctor Name:</b></p>
+	                                <input type="text" value="<?php //echo $title ?>" name="fname" class="blank" />
+	                                <p class="labelenglish"><b>Qualification:</b></p>
+	                                <input type="text" value="<?php //echo $title ?>" name="ename" class="blank" />
+	                                <p class="labelenglish"><b>Digital Signature:</b></p>
+	                                <input type="text" value="<?php //echo $title ?>" name="si" class="blank" />
+	                                <p class="labelenglish"><b>Timings:</b></p>
+	                                <textarea  class="blank" name="mname"><?php //echo $content ?></textarea>
+	                                <div>
+	                                    <input type="reset" name="reset" value="Reset"  class="btn btn-success"/>
+	                                    <?php 
 
-                                        if (isset($_GET['id'])) {
-                                            echo "<input type='submit' name='submit' value='Update'  class='btn btn-success' />";
-                                        }
-                                        else{
-                                            echo "<input type='submit' name='submit' value='Create'  class='btn btn-success' />";
-                                        }
+	                                    if (isset($_GET['id'])) {
+	                                        echo "<input type='submit' name='submit' value='Update'  class='btn btn-success' />";
+	                                    }
+	                                    else{
+	                                        echo "<input type='submit' name='submit' value='Create'  class='btn btn-success' />";
+	                                    }
 
-                                        ?>
-                                    </div>
-                                    <br />
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-</body>
+	                                    ?>
+	                                </div>
+	                                <br />
+	                            </form>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </section>
+	    </div>
+	</div>
 <?php
 include(WEBSITE_PATH.'./includes/footer.php');
 ?>

@@ -44,8 +44,8 @@ if (isset($msg))
 {
 	echo $msg;
 }
-?>     							
-<?php 
+
+//If Is Admin then displays
 if (!IfIsUser($conn) && $_SESSION['user_name']) {
 ?>		
 			<section id="content">
@@ -160,10 +160,10 @@ if (!IfIsUser($conn) && $_SESSION['user_name']) {
 
 <script>
 function delete_confirm(id) {
-  var txt;
-  if (confirm("Are you sure? you want to delete this record.")) {
-   window.location.href = "<?php echo WEBSITE_URL. 'users.php?action=delete&id=' ?>"+id;
-  }
+	var txt;
+	if (confirm("Are you sure? you want to delete this record.")) {
+   		window.location.href = "<?php echo WEBSITE_URL. 'users.php?action=delete&id=' ?>"+id;
+  	}
 }
 </script>
 

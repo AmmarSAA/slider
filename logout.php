@@ -16,7 +16,7 @@ include(WEBSITE_PATH.'./includes/header.php');
 include(WEBSITE_PATH.'./includes/logo.php');
 include(WEBSITE_PATH.'./includes/menu.php');
 echo '<div class="alert alert-success">';
-echo "You have succesfully logged out😀.";
+echo "You have been succesfully logged out!";
 echo '</div>';
 ?>     							
 			

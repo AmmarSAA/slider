@@ -1,10 +1,10 @@
 <?php 
 
-/******************************
-* File Name: profile.php      *
-* Author: Ammar S.A.A         *
+/********************************
+* File Name: profile.php 		*
+* Author: Ammar S.A.A 			*
 * Output: User/Admin Profile 	*
-******************************/
+********************************/
 
 require('config.php');
 require(WEBSITE_PATH.'./includes/db_connection.php');
@@ -160,115 +160,109 @@ if (isset($msg))
 {
   echo $msg;
 }
-?>
-<?php 
+
+//If session has started then display
 if (isset($_SESSION['user_name'])) {
 ?>  
-      <section id="content">
-        <div class="page-wrapper">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col">
-              	<?php if(!$_GET['action']){ ?>
-                	<a class="btn btn-outline-secondary pull-right" href="<?php echo WEBSITE_URL. 'profile.php?action=edit' ?>">Edit Profile</a>
-                    <!--Edit Profile Form-->
-	                <form action="#" method="post" enctype="multipart/form-data" name="edit-profile">
-	                	<br/>
-	                	<input type="hidden" name="edit-profile" value="edit-profile" />
-	                	<input type="hidden" name="id" value="<?php echo $id; ?>" />
-	                	<img class="f-img img-circle circle" src="<?php echo WEBSITE_URL; ?>/images/profile_pictures/<?php if(empty($profile_picture)){ echo '../monitor_mlms.png'; }else{ echo $profile_picture; } ?>" />
-	                	<h2><?php echo $_SESSION["user_name"]; ?></h2>
-	                	<p>View Profile</p>
-	                	<p class="labelenglish"><b>Full Name:</b></p>
-	                	<input type="readonly" value="<?php echo $full_name; ?>" class="blank" name="full_name" readonly />
-	                	<p class="labelenglish"><b>Email ID:</b></p>
-	                	<input type="text" value="<?php echo $email_id; ?>" class="blank" name="email_id" readonly />
-	                	<p class="labelenglish"><b>User Name:</b></p>
-	                	<input type="text" value="<?php echo $user_name; ?>" class="blank" name="username" readonly />
+  		<section id="content">
+    		<div class="page-wrapper">
+      			<div class="container-fluid">
+        			<div class="row">
+          				<div class="col">
+          					<?php if(!$_GET['action']){ ?>
+            					<a class="btn btn-outline-secondary pull-right" href="<?php echo WEBSITE_URL. 'profile.php?action=edit' ?>">Edit Profile</a>
+                				<!--Edit Profile Form-->
+								<form action="#" method="post" enctype="multipart/form-data" name="edit-profile">
+									<br/>
+									<input type="hidden" name="edit-profile" value="edit-profile" />
+									<input type="hidden" name="id" value="<?php echo $id; ?>" />
+									<img class="f-img img-circle circle" src="<?php echo WEBSITE_URL; ?>/images/profile_pictures/<?php if(empty($profile_picture)){ echo '../monitor_mlms.png'; }else{ echo $profile_picture; } ?>" />
+									<h2><?php echo $_SESSION["user_name"]; ?></h2>
+									<p>View Profile</p>
+									<p class="labelenglish"><b>Full Name:</b></p>
+									<input type="readonly" value="<?php echo $full_name; ?>" class="blank" name="full_name" readonly />
+									<p class="labelenglish"><b>Email ID:</b></p>
+									<input type="text" value="<?php echo $email_id; ?>" class="blank" name="email_id" readonly />
+									<p class="labelenglish"><b>User Name:</b></p>
+									<input type="text" value="<?php echo $user_name; ?>" class="blank" name="username" readonly />
 
-	                	<?php if (IfIsUser($conn)) { ?>
-		                	<p class="labelenglish"><b>Mobile No.:</b></p>
-							<input type="text" value="<?php echo $mobile_no ?>" name="mobile_no" class="blank" readonly />
-	                	<?php } ?>
+									<?php if (IfIsUser($conn)) { ?>
+								    	<p class="labelenglish"><b>Mobile No.:</b></p>
+										<input type="text" value="<?php echo $mobile_no ?>" name="mobile_no" class="blank" readonly />
+									<?php } ?>
 
-	                	<p class="labelenglish"><b>To view Password contact <?php echo ADMIN_EMAIL; ?>(Administrator)</b></p>
-	            <!--
-	                  <p class="labelenglish"><b>Status:</b></p> 
-	                  <div class="form-check form-check-inline" name="status">
-	                    <input class="form-check-input" type="radio" name="status" value="Active" <?php if ($status='Active') { echo "checked" ; } ?> />
-	                    <label class="form-check-label" for="status">
-	                      Active
-	                    </label>
-	                  </div>
-	                  <div class="form-check form-check-inline" name="status">
-	                    <input class="form-check-input" type="radio" name="status" value="Inactive" <?php if ($status='Inactive') { echo "checked" ; } ?> />
-	                    <label class="form-check-label" for="status"> 
-	                      Inactive
-	                    </label>
-	                  </div>
-	            -->
+									<p class="labelenglish"><b>To view Password contact <?php echo ADMIN_EMAIL; ?>(Administrator)</b></p>
+									<!--<p class="labelenglish"><b>Status:</b></p> 
+								  	<div class="form-check form-check-inline" name="status">
+								    	<input class="form-check-input" type="radio" name="status" value="Active" <?php //if ($status='Active') { echo "checked" ; } ?> />
+								    	<label class="form-check-label" for="status">
+								      		Active
+								    	</label>
+								  	</div>
+								  	<div class="form-check form-check-inline" name="status">
+								    	<input class="form-check-input" type="radio" name="status" value="Inactive" <?php //if ($status='Inactive') { echo "checked" ; } ?> />
+								    	<label class="form-check-label" for="status"> 
+								      		Inactive
+								    	</label>
+								  	</div>-->
+									<br />
+								</form>
+            					<?php }elseif (isset($_GET['action'])){ ?>
+            						<!--Edit Profile Form-->
+								    <form action="#" method="post" enctype="multipart/form-data" name="edit-profile">
+								    	<br/>
+								    	<input type="hidden" name="edit-profile" value="edit-profile" />
+								    	<input type="hidden" name="id" value="<?php echo $id; ?>" />
+								    	<img class="f-img img-circle circle" src="<?php echo WEBSITE_URL; ?>/images/profile_pictures/<?php if(empty($profile_picture)){ echo '../monitor_mlms.png'; }else{ echo $profile_picture; } ?>" />
+								    	<h2><?php echo $_SESSION["user_name"]; ?></h2>
+								    	<p>Edit Profile</p>
+								    	<p class="labelenglish"><b>Full Name:</b></p>
+								    	<input type="readonly" value="<?php echo $full_name; ?>" class="blank" name="full_name">
+								    	<p class="labelenglish"><b>Email ID:</b></p>
+								    	<input type="text" value="<?php echo $email_id; ?>" class="blank" name="email_id">
+								    	<p class="labelenglish"><b>Profile Picture:</b></p>
+								    	<input class="labelenglish" type="file" accept="img/*" name="profile_picture" value="<?php echo $profile_picture; ?>">
+								    	<p class="labelenglish"><small><b>Note:</b><br /> Your <b class="text-uppercase text-right"><?php if(empty($profile_picture)){ echo 'Profile Picture'; }else{ echo $profile_picture; } ?></b> must not be more than <b>11.00 MB</b>.</small></p>
+								    	<p class="labelenglish"><b>User Name:</b></p>
+								    	<input type="text" value="<?php echo $user_name; ?>" class="blank" name="username">
 
-	                <br />
-	                </form>
-                <?php }elseif (isset($_GET['action'])){ ?>
-                	<!--Edit Profile Form-->
-	                <form action="#" method="post" enctype="multipart/form-data" name="edit-profile">
-	                	<br/>
-	                	<input type="hidden" name="edit-profile" value="edit-profile" />
-	                	<input type="hidden" name="id" value="<?php echo $id; ?>" />
-	                	<img class="f-img img-circle circle" src="<?php echo WEBSITE_URL; ?>/images/profile_pictures/<?php if(empty($profile_picture)){ echo '../monitor_mlms.png'; }else{ echo $profile_picture; } ?>" />
-	                	<h2><?php echo $_SESSION["user_name"]; ?></h2>
-	                	<p>Edit Profile</p>
-	                	<p class="labelenglish"><b>Full Name:</b></p>
-	                	<input type="readonly" value="<?php echo $full_name; ?>" class="blank" name="full_name">
-	                	<p class="labelenglish"><b>Email ID:</b></p>
-	                	<input type="text" value="<?php echo $email_id; ?>" class="blank" name="email_id">
-	                	<p class="labelenglish"><b>Profile Picture:</b></p>
-	                	<input class="labelenglish" type="file" accept="img/*" name="profile_picture" value="<?php echo $profile_picture; ?>">
-	                	<p class="labelenglish"><small><b>Note:</b><br /> Your <b class="text-uppercase text-right"><?php if(empty($profile_picture)){ echo 'Profile Picture'; }else{ echo $profile_picture; } ?></b> must not be more than <b>11.00 MB</b>.</small></p>
-	                	<p class="labelenglish"><b>User Name:</b></p>
-	                	<input type="text" value="<?php echo $user_name; ?>" class="blank" name="username">
+								    	<?php if (IfIsUser($conn)) { ?>
+								        	<p class="labelenglish"><b>Mobile No.:</b></p>
+												<input type="text" value="<?php echo $mobile_no ?>" name="mobile_no" class="blank" required />
+								    	<?php } ?>
 
-	                	<?php if (IfIsUser($conn)) { ?>
-		                	<p class="labelenglish"><b>Mobile No.:</b></p>
-								<input type="text" value="<?php echo $mobile_no ?>" name="mobile_no" class="blank" required />
-	                	<?php } ?>
+								    	<p class="labelenglish"><b>Password:</b></p>
+								    	<input value="<?php echo $password; ?>" type="password"  name="password" class="blank" required />
+								      
+								    	<p class="labelenglish"><b>Confirm Password:</b></p>
+								    	<input value="<?php echo $password; ?>" class="blank" name="con_pass" type="password" required  >
 
-	                	<p class="labelenglish"><b>Password:</b></p>
-	                	<input value="<?php echo $password; ?>" type="password"  name="password" class="blank" required />
-	                  
-	                	<p class="labelenglish"><b>Confirm Password:</b></p>
-	                	<input value="<?php echo $password; ?>" class="blank" name="con_pass" type="password" required  >
-
-	                	<div>
-	                    	<input type="reset" name="reset" value="Reset"  class="btn btn-success"/>
-	                    	<input type='submit' name='submit' value='Update'  class='btn btn-success' />
-	                	</div>
-	            <!--
-	                  <p class="labelenglish"><b>Status:</b></p> 
-	                  <div class="form-check form-check-inline" name="status">
-	                    <input class="form-check-input" type="radio" name="status" value="Active" <?php if ($status='Active') { echo "checked" ; } ?> />
-	                    <label class="form-check-label" for="status">
-	                      Active
-	                    </label>
-	                  </div>
-	                  <div class="form-check form-check-inline" name="status">
-	                    <input class="form-check-input" type="radio" name="status" value="Inactive" <?php if ($status='Inactive') { echo "checked" ; } ?> />
-	                    <label class="form-check-label" for="status"> 
-	                      Inactive
-	                    </label>
-	                  </div>
-	            -->
-
-	                <br />
-	                </form>
-	            <?php } ?>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <?php 
+								    	<div>
+								        	<input type="reset" name="reset" value="Reset"  class="btn btn-success"/>
+								        	<input type='submit' name='submit' value='Update'  class='btn btn-success' />
+								    	</div>
+										<!--<p class="labelenglish"><b>Status:</b></p> 
+								      	<div class="form-check form-check-inline" name="status">
+								        	<input class="form-check-input" type="radio" name="status" value="Active" <?php //if ($status='Active') { echo "checked" ; } ?> />
+								        	<label class="form-check-label" for="status">
+								        		Active
+								        	</label>
+								      	</div>
+								      	<div class="form-check form-check-inline" name="status">
+								        	<input class="form-check-input" type="radio" name="status" value="Inactive" <?php //if ($status='Inactive') { echo "checked" ; } ?> />
+								        	<label class="form-check-label" for="status"> 
+								          		Inactive
+								        	</label>
+								      	</div>-->
+								    	<br />
+								    </form>
+								<?php } ?>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<?php 
 				}else{ echo "<div class='alert alert-danger'>Access Denied!</div>"; }
 			?>
 		</div>

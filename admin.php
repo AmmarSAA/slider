@@ -56,16 +56,16 @@ if (!IfIsUser($conn) && $_SESSION['user_name'] == "Ammar S.A.A" || $_SESSION['us
 							<div class="col md-8 lg-10 sm-6">
 								<!--Search Nav Start-->
 								<nav class="navbar navbar-light default-color bg-transparent nav justify-content-between">
-  									<a class="navbar-brand" href="admin.php">Admins' List</a>
-  									<!--Search Form Start-->
-  									<form class="form-inline form-responsive my-0 form-inline bg-transparent" method="POST">
-    									<div class="md-form form-sm my-0">
-      										<input type="text" class="form-control" name="search" placeholder="Search..." />
-    										<button class="btn btn-sm my-0 btn-transparent" type="submit">
-   												<i class="material-icons">search</i>
-  											</button>
-  										</div>
-  									</form>
+										<a class="navbar-brand" href="admin.php">Admins' List</a>
+										<!--Search Form Start-->
+										<form class="form-inline form-responsive my-0 form-inline bg-transparent" method="POST">
+										<div class="md-form form-sm my-0">
+	  										<input type="text" class="form-control" name="search" placeholder="Search..." />
+											<button class="btn btn-sm my-0 btn-transparent" type="submit">
+													<i class="material-icons">search</i>
+												</button>
+											</div>
+										</form>
 									<!--Search Form End-->
 									<div class="btn btn-group">
 									    <a class="btn btn-outline-primary" href="user-signup.php" role="button">Add User</a>
@@ -173,10 +173,10 @@ if (!IfIsUser($conn) && $_SESSION['user_name'] == "Ammar S.A.A" || $_SESSION['us
 	</div>
 <script>
 function delete_confirm(id) {
-  var txt;
-  if (confirm("Are you sure? you want to delete this record.")) {
-   window.location.href = "<?php echo WEBSITE_URL. 'admin.php?action=delete&id=' ?>"+id;
-  }
+	var txt;
+	if (confirm("Are you sure? you want to delete this record.")) {
+		window.location.href = "<?php echo WEBSITE_URL. 'admin.php?action=delete&id=' ?>"+id;
+	}
 }
 </script>
 

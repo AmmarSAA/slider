@@ -6,10 +6,12 @@
 * Output: Carousel        *
 **************************/
 
+//selecting all files from tblslider
 $sql= "SELECT * FROM tblslider";
 $result = $conn->query($sql);
 
 ?>                  
+<!--Carousel Start-->
 <div id="myCarousel" class="carousel slide" data-ride="carousel"  data-bs-interval="500">
   	<!-- Indicators -->
     <ol class="carousel-indicators">
@@ -19,7 +21,7 @@ $result = $conn->query($sql);
     	 	if ($x == 0){
     	 		$is_active = "active";
     	 	} ?>
-    		<li data-target="#myCarousel" data-slide-to="<?= $x ?>" class="<?= $is_active ?>"></li>
+    		<li data-target="#myCarousel" data-slide-to="<?php echo $x ?>" class="<?php echo $is_active ?>"></li>
 		<?php $x++; } ?>
 	</ol>
 	<!-- Wrapper for slides -->
@@ -30,8 +32,8 @@ $result = $conn->query($sql);
 	 	if ($x == 0){
 	 		$is_active = "active";
 	 	} ?>
-    	<div class="item <?= $is_active ?>">
-      		<img src="<?php echo WEBSITE_URL; ?>/images/slider/<?= $row['slider_img'] ?>" width="1000px" height="500px">
+    	<div class="item <?php echo $is_active ?>">
+      		<img src="<?php echo WEBSITE_URL; ?>/images/slider/<?php echo $row['slider_img'] ?>" width="1000px" height="500px">
     	</div>
 		<div class="carousel-caption">
 			<p hidden><?php echo $row['id']; ?></p>
