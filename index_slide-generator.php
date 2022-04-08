@@ -71,7 +71,7 @@ if (isset($_POST['slide-create']))
         }
         imagepng($bgpic,$save);
         imagedestroy($bgpic);
-        $msg = "<div class='alert alert-success text-capitalize'>ntry successful! to view total slides click/tap <a href='".WEBSITE_URL."./slide_list.php'>HERE</a>.</div>";
+        $msg = "<div class='alert alert-success text-capitalize'>Entry successful! to view total slides click/tap <a href='".WEBSITE_URL."./slide_list.php'>HERE</a>.</div>";
         //redirect($save); 
     }else{
       $msg = "<div class='alert alert-danger text-capitalize'>Errors occured!</div>"; 

@@ -323,14 +323,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "slide_list.php",
-			"settings":
-			{
-				"buffer_size": 4873,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -368,8 +360,7 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/slider",
-		"/C/xampp/htdocs/slider/css"
+		"/C/xampp/htdocs/lms"
 	],
 	"file_history":
 	[
@@ -446,7 +437,7 @@
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
@@ -523,38 +514,6 @@
 		{
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "slide_list.php",
-					"selected": true,
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 4873,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"stack_multiselect": false,
-					"type": "text"
-				}
 			]
 		},
 		{
@@ -613,7 +572,7 @@
 	"project": "slider.sublime-project",
 	"replace":
 	{
-		"height": 68.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":
