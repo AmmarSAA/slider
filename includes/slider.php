@@ -12,7 +12,7 @@ $result = $conn->query($sql);
 
 ?>                  
 <!--Carousel Start-->
-<div id="myCarousel" class="carousel slide" data-ride="carousel"  data-bs-interval="500">
+<div id="myCarousel" class="carousel slide" data-ride="carousel"  data-interval="5000">
   	<!-- Indicators -->
     <ol class="carousel-indicators">
     	<?php $x = 0;
@@ -33,7 +33,7 @@ $result = $conn->query($sql);
 	 		$is_active = "active";
 	 	} ?>
     	<div class="item <?php echo $is_active ?>">
-      		<img src="<?php echo WEBSITE_URL; ?>/images/slider/<?php echo $row['slider_img'] ?>" width="1000px" height="500px">
+      		<img src="<?php echo WEBSITE_URL; ?>/images/slider/<?php echo $row['slider_img'] ?>" width="auto" height="500px">
     	</div>
 		<div class="carousel-caption">
 			<p hidden><?php echo $row['id']; ?></p>
